@@ -6,12 +6,11 @@ import (
 	"net/url"
 	"os"
 
-	"gopkg.in/oauth2.v3/errors"
-	"gopkg.in/oauth2.v3/manage"
-	"gopkg.in/oauth2.v3/models"
-	"gopkg.in/oauth2.v3/server"
-	"gopkg.in/oauth2.v3/store"
-	"gopkg.in/session.v1"
+	"github.com/contamobi/oauth2/errors"
+	"github.com/contamobi/oauth2/manage"
+	"github.com/contamobi/oauth2/models"
+	"github.com/contamobi/oauth2/server"
+	"github.com/contamobi/oauth2/store"
 )
 
 var (

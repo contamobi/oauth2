@@ -31,7 +31,7 @@
 ### Download and install
 
 ``` bash
-go get -u -v gopkg.in/oauth2.v3/...
+go get -u -v github.com/contamobi/oauth2/...
 ```
 
 ### Create file `server.go`
@@ -43,11 +43,11 @@ import (
 	"log"
 	"net/http"
 
-	"gopkg.in/oauth2.v3/errors"
-	"gopkg.in/oauth2.v3/manage"
-	"gopkg.in/oauth2.v3/models"
-	"gopkg.in/oauth2.v3/server"
-	"gopkg.in/oauth2.v3/store"
+	"github.com/contamobi/oauth2/errors"
+	"github.com/contamobi/oauth2/manage"
+	"github.com/contamobi/oauth2/models"
+	"github.com/contamobi/oauth2/server"
+	"github.com/contamobi/oauth2/store"
 )
 
 func main() {
@@ -143,9 +143,9 @@ Simulation examples of authorization code model, please check [example](/example
 [License-Image]: https://img.shields.io/npm/l/express.svg
 [Build-Status-Url]: https://travis-ci.org/go-oauth2/oauth2
 [Build-Status-Image]: https://travis-ci.org/go-oauth2/oauth2.svg?branch=master
-[ReportCard-Url]: https://goreportcard.com/report/gopkg.in/oauth2.v3
-[ReportCard-Image]: https://goreportcard.com/badge/gopkg.in/oauth2.v3
-[GoDoc-Url]: https://godoc.org/gopkg.in/oauth2.v3
-[GoDoc-Image]: https://godoc.org/gopkg.in/oauth2.v3?status.svg
+[ReportCard-Url]: https://goreportcard.com/report/github.com/contamobi/oauth2
+[ReportCard-Image]: https://goreportcard.com/badge/github.com/contamobi/oauth2
+[GoDoc-Url]: https://godoc.org/github.com/contamobi/oauth2
+[GoDoc-Image]: https://godoc.org/github.com/contamobi/oauth2?status.svg
 [Coverage-Url]: https://coveralls.io/github/go-oauth2/oauth2?branch=master
 [Coverage-Image]: https://coveralls.io/repos/github/go-oauth2/oauth2/badge.svg?branch=master

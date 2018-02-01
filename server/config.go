@@ -3,7 +3,7 @@ package server
 import (
 	"time"
 
-	"gopkg.in/oauth2.v3"
+	"github.com/contamobi/oauth2"
 )
 
 // Config configuration parameters

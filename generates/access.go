@@ -6,8 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/satori/go.uuid"
-	"gopkg.in/oauth2.v3"
+	"github.com/contamobi/oauth2"
 )
 
 // NewAccessGenerate create to generate the access token instance

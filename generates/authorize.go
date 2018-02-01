@@ -5,8 +5,7 @@ import (
 	"encoding/base64"
 	"strings"
 
-	"github.com/satori/go.uuid"
-	"gopkg.in/oauth2.v3"
+	"github.com/contamobi/oauth2"
 )
 
 // NewAuthorizeGenerate create to generate the authorize code instance

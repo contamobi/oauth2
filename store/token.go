@@ -4,10 +4,9 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/satori/go.uuid"
+	"github.com/contamobi/oauth2"
+	"github.com/contamobi/oauth2/models"
 	"github.com/tidwall/buntdb"
-	"gopkg.in/oauth2.v3"
-	"gopkg.in/oauth2.v3/models"
 )
 
 // NewMemoryTokenStore create a token store instance based on memory
