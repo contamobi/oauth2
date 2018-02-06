@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/contamobi/oauth2"
+	"github.com/satori/go.uuid"
 )
 
 // NewAuthorizeGenerate create to generate the authorize code instance

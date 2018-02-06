@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/contamobi/oauth2"
+	"github.com/satori/go.uuid"
 )
 
 // NewAccessGenerate create to generate the access token instance

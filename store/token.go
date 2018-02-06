@@ -6,6 +6,7 @@ import (
 
 	"github.com/contamobi/oauth2"
 	"github.com/contamobi/oauth2/models"
+	"github.com/satori/go.uuid"
 	"github.com/tidwall/buntdb"
 )
 
