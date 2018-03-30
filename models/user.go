@@ -1,7 +1,7 @@
 package models
 
 type UserInterface interface {
-	GetID() int64
+	GetID() string
 	GetClientID() string
 	GetAccountID() int64
 	GetSecret() string
