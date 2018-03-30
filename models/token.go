@@ -15,6 +15,8 @@ func NewToken() *Token {
 type Token struct {
 	ClientID         string        `bson:"ClientID"`
 	UserID           string        `bson:"UserID"`
+	AccountID        string        `bson:"AccountID"`
+	Secret           string        `bson:"Secret"`
 	RedirectURI      string        `bson:"RedirectURI"`
 	Scope            string        `bson:"Scope"`
 	Code             string        `bson:"Code"`
@@ -43,6 +45,16 @@ func (t *Token) SetClientID(clientID string) {
 	t.ClientID = clientID
 }
 
+// GetSecret the client secret
+func (t *Token) GetSecret() string {
+	return t.Secret
+}
+
+// SetSecret the client secret
+func (t *Token) SetSecret(secret string) {
+	t.Secret = secret
+}
+
 // GetUserID the user id
 func (t *Token) GetUserID() string {
 	return t.UserID
@@ -51,6 +63,16 @@ func (t *Token) GetUserID() string {
 // SetUserID the user id
 func (t *Token) SetUserID(userID string) {
 	t.UserID = userID
+}
+
+// GetAccountID the account id
+func (t *Token) GetAccountID() string {
+	return t.AccountID
+}
+
+// SetAccountID the user id
+func (t *Token) SetAccountID(accountID string) {
+	t.AccountID = accountID
 }
 
 // GetRedirectURI redirect URI

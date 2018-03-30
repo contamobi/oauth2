@@ -21,6 +21,10 @@ type (
 		SetClientID(string)
 		GetUserID() string
 		SetUserID(string)
+		GetAccountID() string
+		SetAccountID(string)
+		GetSecret() string
+		SetSecret(string)
 		GetRedirectURI() string
 		SetRedirectURI(string)
 		GetScope() string

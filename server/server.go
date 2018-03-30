@@ -10,6 +10,7 @@ import (
 
 	"github.com/contamobi/oauth2"
 	"github.com/contamobi/oauth2/errors"
+	models "github.com/contamobi/oauth2/models"
 )
 
 // NewDefaultServer create a default authorization server
@@ -36,7 +37,7 @@ func NewServer(cfg *Config, manager oauth2.Manager) *Server {
 		return
 	}
 
-	srv.PasswordAuthorizationHandler = func(username, password string) (userID string, err error) {
+	srv.PasswordAuthorizationHandler = func(username, password string) (user models.UserInterface, err error) {
 		err = errors.ErrAccessDenied
 		return
 	}
@@ -336,16 +337,19 @@ func (s *Server) ValidationTokenRequest(r *http.Request) (gt oauth2.GrantType, t
 			return
 		}
 
-		userID, verr := s.PasswordAuthorizationHandler(username, password)
+		user, verr := s.PasswordAuthorizationHandler(username, password)
 		if verr != nil {
 			err = verr
 			return
-		} else if userID == "" {
+		} else if user.GetID() == "" {
 			err = errors.ErrInvalidGrant
 			return
 		}
 
-		tgr.UserID = userID
+		tgr.UserID = user.GetID()
+		tgr.AccountID = user.GetAccountID()
+		tgr.ClientID = user.GetClientID()
+		tgr.ClientSecret = user.GetSecret()
 	case oauth2.ClientCredentials:
 		tgr.Scope = r.FormValue("scope")
 	case oauth2.Refreshing:

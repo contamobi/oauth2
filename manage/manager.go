@@ -308,6 +308,8 @@ func (m *Manager) GenerateAccessToken(gt oauth2.GrantType, tgr *oauth2.TokenGene
 		}
 		ti.SetClientID(tgr.ClientID)
 		ti.SetUserID(tgr.UserID)
+		ti.SetAccountID(tgr.AccountID)
+		ti.SetSecret(tgr.ClientSecret)
 		ti.SetRedirectURI(tgr.RedirectURI)
 		ti.SetScope(tgr.Scope)
 		ti.SetAccessCreateAt(td.CreateAt)
