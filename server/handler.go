@@ -6,6 +6,7 @@ import (
 
 	"github.com/contamobi/oauth2"
 	"github.com/contamobi/oauth2/errors"
+	models "github.com/contamobi/oauth2/models"
 )
 
 type (
@@ -22,7 +23,7 @@ type (
 	UserAuthorizationHandler func(w http.ResponseWriter, r *http.Request) (userID string, err error)
 
 	// PasswordAuthorizationHandler get user id from username and password
-	PasswordAuthorizationHandler func(username, password string) (userID string, err error)
+	PasswordAuthorizationHandler func(username, password string) (user models.UserInterface, err error)
 
 	// RefreshingScopeHandler check the scope of the refreshing token
 	RefreshingScopeHandler func(newScope, oldScope string) (allowed bool, err error)
